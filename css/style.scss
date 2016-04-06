@@ -1,0 +1,12 @@
+/* Streaming Comments are maintained */
+// Single line comments are removed
+
+
+// sass --watch style.scss:style.min.css --style compressed
+
+@import "partials/variables";
+@import "partials/_mixins";
+@import "partials/reset";
+@import "partials/classes";
+@import "partials/grid";
+@import "nav.scss";

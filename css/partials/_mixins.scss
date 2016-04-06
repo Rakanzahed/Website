@@ -1,0 +1,143 @@
+@mixin centered-child{
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+@mixin clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear:both;
+	}
+}
+
+@mixin compact-list {
+	list-style-type:none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+@mixin container-make($prefix:'') {
+	.container {
+
+		@include centered-child;
+
+		@if($prefix == 'xl' or $prefix == 'lg') {
+			width: map-get($container-width,$prefix);
+		}
+		@else {
+			width: auto;
+
+		}
+	}
+}
+
+@function class-stack($type,$middlefix,$size,$list:'') {
+
+	@for $i from 1 through $size {
+		@if($list!='') {
+			$list: "#{$list},";
+		}
+		$list: "#{$list}.#{$type}#{$middlefix}-#{$i}";
+
+	}
+	@return $list;
+}
+
+//#{class-stack('col','-sm',12)} {
+//	float:left;
+//}
+ @mixin make-columns{
+ 	[class*='col-'] {
+ 		float:left;
+ 	}
+ 	.row{
+ 		@include clearfix;
+
+ 		&.with-gutters {
+ 			margin-right:-($gutter-width / 2);
+ 			margin-left:-($gutter-width / 2);
+ 			&>[class*='col-']{
+ 				padding-right:-($gutter-width / 2);
+ 				padding-left:-($gutter-width / 2);
+ 			}
+ 		}
+ 	}
+ }
+
+@mixin make-liquid-columns($prefix:''){
+	@for $i from 1 through $column-length {
+		.col#{$prefix}-#{$i}{
+			width:percentage($i / $column-length);
+		}
+		.offset#{$prefix}-#{$i}{
+			margin-left:percentage($i / $column-length);
+		}
+	}
+}
+
+
+@mixin make-main-utilities($prefix:''){
+	.pull#{$prefix}-left{
+		float:left;
+	}
+	.pull#{$prefix}-right{
+		float:right;
+	}
+	.pull#{$prefix}-none{
+		float:none;
+	}
+	.pull#{$prefix}-clear{
+		clear:both;
+	}
+	.pull#{$prefix}-center{
+		@include centered-child;
+	}
+}
+
+@mixin make-box-utilities($prefix:''){
+	@each $per-short,$per-long in $boxes-map{
+		@each $suf-short,$suf-long in $size-map{
+			@each $pos-short,$pos-long in $position-map{
+				.#{$per-short}#{$prefix}-#{$pos-short}#{$suf-short}{
+					#{$per-long}-#{$pos-long}: $suf-long;
+				}
+			}
+
+			.#{$per-short}#{$prefix}-h#{$suf-short}{
+				#{$per-long}-left: $suf-long;
+				#{$per-long}-right: $suf-long;
+			}
+			.#{$per-short}#{$prefix}-v#{$suf-short}{
+				#{$per-long}-top: $suf-long;
+				#{$per-long}-bottom: $suf-long;
+			}
+
+			.#{$per-short}#{$prefix}-#{$suf-short}{
+				#{$per-long}: $suf-long;
+				
+			}
+		}
+	}
+
+}
+
+@mixin breakpoint($point) {
+  @if $point == 1300 {
+    @media (max-width: 1300px) { @content; }
+  }
+  @else if $point == 715 {
+    @media (max-width: 715px) { @content; }
+  }
+}
+
+
+
+
+
+
+
+
+
+

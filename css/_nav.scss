@@ -1,0 +1,213 @@
+/*********************
+VARIABLES
+**********************/
+$link-color:#CCC;
+$link-hover:#FFF;
+$link-vertical-padding:20px;      /*Controls Menu top & bottom padding*/
+$link-horizontal-padding:25px;    /*Contols Menu left & right padding*/
+$menu-background: #FFFFFF;        /*Control Menu Color Scheme*/
+
+/*********************
+RESPONSIVE BREAKPOINTS
+**********************/
+@mixin breakpoint($point) {
+  @if $point == 1300 {
+    @media (max-width: 1300px) { @content; }
+  }
+  @else if $point == 715 {
+    @media (max-width: 715px) { @content; }
+  }
+}
+/*********************
+NAVIGATION STYLES
+**********************/
+nav {
+  width:100%;
+  @include breakpoint(715) {
+    margin:65px 0 0 0;
+    max-height:0;
+    overflow:hidden;
+    transition: all 0.5s ease;
+
+    
+  }
+}
+
+nav ul {
+  margin:0 auto;
+  width:1100px;
+  list-style:none;
+
+  
+   @include breakpoint(715) {
+      margin:0;
+      padding:0;
+      width:100%;
+      z-index:15;
+    } 
+  
+  li {
+    float:left;
+    position:relative;
+    z-index:1;
+    
+    @include breakpoint(715) {
+      float:none;
+      position:relative;
+      margin:0;
+    }
+    
+    a {
+      display:block;
+      padding: $link-vertical-padding $link-horizontal-padding;
+      text-align:center;
+      color:$link-color;
+      text-decoration:none;
+      transition: all 0.1s ease;
+
+      &:hover {
+      background-color:#19A3C2;
+        color:$link-hover;
+        transition: all 0.2s ease;
+      }
+
+      @include breakpoint(715) {
+        display:table;
+        margin:0;
+        padding:15px 2px;
+        color:white;
+        border-top:1px solid rgba(0,0,0,.15);
+        text-shadow:none;
+        width:100%;
+      }
+    }
+    
+    &:hover ul {
+
+      opacity:1;
+      max-height:1000px;
+      transition: all 0.3s ease;
+      
+      @include breakpoint(715) {
+        max-height:0;
+      } 
+    }
+    
+    /******************
+    SUBNAV
+    ******************/
+    
+    ul {
+      background-color:#FFF;
+      list-style:none;
+      padding:0;
+      position:absolute;
+      width:200px;
+      max-height:0;
+      z-index:0;
+      opacity:0;
+      overflow:hidden;
+      font-size:.9em;
+      transition: all 0.3s ease;
+
+      @include breakpoint(715) {
+        max-height:0;
+        opacity:1;
+        width:100%;
+        position:relative;
+        overflow:hidden;
+        transition: all 2s ease;
+      }
+      
+      li {
+        float:none;
+        margin:0;
+
+
+        @include breakpoint(715) {
+          margin:0;
+        }
+        
+        a {
+          display:block;
+          text-align:left;
+          padding:$link-vertical-padding/1.5 $link-horizontal-padding/1.5;
+          margin:0;
+          border-right:none;
+          border-top:1px solid darken($menu-background,12%);;
+          text-transform:none;
+          text-shadow:none;
+          transition: all 0.2s ease;
+
+          
+          &:hover {
+            color:$link-hover;
+            transition: all 0.5s ease;
+          }
+
+          @include breakpoint(715) {
+            color:$link-color;
+            padding-left:20px;
+            background:none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/***************************
+MOBILE NAV STYLES
+***************************/
+.mobile {
+  display:none;
+  margin:0;
+  padding:20px 15px;
+  background-color: #19A3C2;
+  position:absolute;
+  color:white;
+  text-decoration:none;
+  top:15px;
+  right:15px;
+  line-height:0;
+
+  
+  @include breakpoint(715) {
+    display:table;
+  }
+}
+
+.active {
+  max-height:9000px !important;
+  transition: all 1s ease;
+ }
+
+@include breakpoint(715) {
+  .arrow {
+    display:block;
+    float:right;
+    height:30px;
+    width:30px;
+    position:absolute;
+    right:25px;
+    top:10px;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      cursor:pointer;
+    }
+  }
+
+  .rotate {
+    transition: all 0.3s ease;
+    -webkit-transform:rotate(-180deg);
+      -moz-transform:rotate(-180deg);
+       -o-transform:rotate(-180deg);
+          transform:rotate(-180deg);
+  }
+}
+nav ul li a {
+    color: #000;  
+    font-size:$size-md;
+}

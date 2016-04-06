@@ -1,0 +1,80 @@
+/* OPERATORS */
+/*
+ASSIGNMENT
+: assign the right to the left
+
+MATH
++ Addition
+- Subtracion  
+* Multiplication (asterisk)
+/ Division (solidus)
+
+COMPATISON
+== is the left equal to the roght
+!= is not equal to 
+
+
+
+*/
+
+$num: 4;
+@if($num == 5){
+	/* it's EQUAL! */
+}
+@else if($num<5) {
+	/* It's LESS! */
+}
+@else if($num>5) {
+	/* It's More! */
+}
+@else {
+	/* I don't know... It's weird */
+}
+
+
+/* FOR LOOP */
+// $i is the iterator
+@for $i from 1 through 9 {
+	.column#{$i}{
+		width: $i * 100px;
+	}
+}
+
+/* EACH LOOP */
+
+$container-widht:(
+	xs:0,
+	sm:480px,
+	md:640px,
+	lg:960px,
+	xl:1280px 
+	);
+@each $key,$value in $container-widht {
+	.container-#{$key} {
+		width:$value;
+	}
+}
+
+
+/* MIXIN */
+@mixin my-mixin {
+	.container {
+		width:50px;
+	}
+}
+
+@include my-mixin; 
+
+@mixin make-container($num:800) {
+	.container {
+		width: $num*1px;
+	}
+}
+
+@include make-container;
+@include make-container(600);
+
+
+
+
+

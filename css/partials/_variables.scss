@@ -1,0 +1,67 @@
+$color-main:"blue";
+$color-sub:"maroon";
+
+$size-sm:7px;
+$size-md: $size-sm * 2;
+$size-lg: $size-md + 10;
+
+$site-width:800px;
+
+$font-family:Lato, sans-serif;
+$font-header:Cambria, serif;
+
+
+
+// Sass List
+$cool-colors:(
+	"blue",
+	"grey",
+	#fff 
+	);
+
+//Sass Map
+
+$container-width:(
+	xs:0,
+	sm:400px,
+	md:640px,
+	lg:960px,
+	xl:1000px
+	);
+
+$gutter-width:$size-md;
+$column-length:12;
+
+
+$boxes-map:(
+	p:padding,
+	m:margin
+	);
+$positions-map:(
+	t:top,
+	r:right,
+	b:bottom,
+	l:left
+	);
+// h= horizontal, v = vertical, ''=all sides
+$sizes-map:(
+	l:$size-lg,
+	m:$size-md,
+	s:$size-sm,
+	n:0
+	);
+
+
+
+$link-color:white;
+$link-hover:#00aedb;
+$link-vertical-padding:20px;      /*Controls Menu top & bottom padding*/
+$link-horizontal-padding:25px;    /*Contols Menu left & right padding*/
+$menu-background: #353535;        /*Control Menu Color Scheme*/
+
+
+
+
+
+
+

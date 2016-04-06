@@ -1,0 +1,74 @@
+/* OPERATORS */
+/*
+ASSIGNMENT
+: assign the right to the left
+
+MATH
++ Addition
+- Subtracion  
+* Multiplication (asterisk)
+/ Division (solidus)
+
+COMPATISON
+== is the left equal to the roght
+!= is not equal to 
+
+
+
+*/
+/* It's LESS! */
+/* FOR LOOP */
+.column1 {
+  width: 100px; }
+
+.column2 {
+  width: 200px; }
+
+.column3 {
+  width: 300px; }
+
+.column4 {
+  width: 400px; }
+
+.column5 {
+  width: 500px; }
+
+.column6 {
+  width: 600px; }
+
+.column7 {
+  width: 700px; }
+
+.column8 {
+  width: 800px; }
+
+.column9 {
+  width: 900px; }
+
+/* EACH LOOP */
+.container-xs {
+  width: 0; }
+
+.container-sm {
+  width: 480px; }
+
+.container-md {
+  width: 640px; }
+
+.container-lg {
+  width: 960px; }
+
+.container-xl {
+  width: 1280px; }
+
+/* MIXIN */
+.container {
+  width: 50px; }
+
+.container {
+  width: 800px; }
+
+.container {
+  width: 600px; }
+
+/*# sourceMappingURL=sass_programing.css.map */

@@ -1,0 +1,249 @@
+.centered-child{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+// .containar {
+// 	max-width:$site-width;
+// 	// @extend .centered-child;
+// 	@include centered-child;
+
+// }
+// .containar{
+// 	max-width:100%;
+// }
+
+
+
+
+.well {
+	@include clearfix;
+	background-color:#ddd;
+	border-radius:$size-sm;
+	padding:$size-md;
+	margin: $size-sm;
+	margin-top:50%;
+	min-height:auto;
+}
+
+
+@font-face {
+    font-family: lato;
+    src: url(../fonts/Lato2OFL/Lato-Medium.ttf);
+}
+.display-inline {
+    display: inline-block;
+}
+
+
+
+.home {
+    background-image: url('../img/banner2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 450px;
+    padding-top: 10%;
+
+}
+
+
+.home-text ul {
+    width: 313px;
+    margin: 0 auto;
+    padding: 0;
+
+}
+.home-text ul li {
+    list-style-type: none;
+    display: flex;
+    padding-bottom: 5%;
+    text-align: center;
+}
+.home-text1 > p{
+	color:#FFF;
+	font-size:$size-lg;
+}
+
+.home-text ul li a {
+    padding: 10px 30px;
+    font-size: 16px;
+}
+.home-text ul li:nth-child(1) a {
+    color:#fff;
+    border: 2px #fff solid;
+    -webkit-transition: 0.7s ease;
+    moz-transition: 0.7s ease;
+    transition: 0.7s ease;
+}
+.home-text ul li a:focus, #home-text ul li a:hover {
+    text-decoration: none;
+}
+.home-text ul li:nth-child(2) a {
+    color:#fff;
+    border: 2px #19A3C2 solid;
+    background-color: #19A3C2;
+    -webkit-transition: 0.7s ease;
+    moz-transition: 0.7s ease;
+    transition: 0.7s ease;
+}
+.btn-fixit:hover,.btn-fixit:focus {
+	color: #19A3C2;
+	background-color: #fff;
+	border: 1px #19A3C2 solid;
+	transition:0.7s;
+}
+.home-text ul li:nth-child(1) a:hover {
+	background-color: #fff;
+	color: #19A3C2;
+	-webkit-transition: 0.7s ease;
+	moz-transition: 0.7s ease;
+	transition: 0.7s ease;
+}
+.home-text ul li:nth-child(2) a:hover {
+	color:#19A3C2;
+	border: 2px #19A3C2 solid;
+	background-color: transparent;
+	-webkit-transition: 0.7s ease;
+	moz-transition: 0.7s ease;
+	transition: 0.7s ease;
+}
+.home-text ul li a {
+    padding: 16px 29px;
+    font-size: 16px;
+}
+
+.color-white {
+    color: #fff;
+}
+.btn-fixit {
+    background-color: #19A3C2;
+    color: #fff;
+    transition:0.7s;
+    padding: 5px 60px;
+}
+.display-inline {
+    display: inline-block;
+}
+
+
+
+
+.line{
+	text-align:center;
+}
+
+
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+#section1 {
+    background-color: #eee;
+}
+
+h4, p{
+	font-size:$size-md;
+	  text-align: center;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.profile-image {
+    width: 300px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+.color-white {
+    color: #fff;
+}
+.color-grey {
+    color: #ccc;
+}
+.float-left {
+    float: left;
+}
+.relative {
+    position: relative;
+}
+.padding-left0 {
+    padding-left: 0
+}
+.padding-right0 {
+    padding-right: 0
+}
+.btn-fixit {
+    background-color: #19A3C2;
+    color: #fff;
+    transition:0.7s;
+    padding: 5px 60px;
+}
+.carousel-control {
+    background-image: none;
+}
+.logo-text {
+    position: relative;
+    top: 5px;
+    font-size: 25px;
+    left: -5px;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0
+}
+.myCarousel .item iframe {
+    margin: 0 auto
+}
+
+.font-bold {
+    font-weight: bold;
+    color: #888;
+}
+
+
+footer {
+    background-color: #eee;
+}
+footer a {
+    color: #ccc
+}
+footer .social-icons {
+    font-size: 25px;
+    transition:1s;
+}
+footer .social-icons:hover {
+    color: #19A3C2;
+    transition:1s;
+}
+
+
